@@ -1,0 +1,29 @@
+.back{
+    background-image: url("../img_aitec_2.jpg");
+}
+
+.btn{
+    margin-top: 5%;
+    padding: 8%;
+    padding-left: 50%;
+    padding-right: 50%;
+}
+.calulator{
+    opacity: .9;
+    padding: 2%;
+    background-color: white;
+}
+input{
+padding: 2%;
+    background-color: #b2dba1;
+}
+.cal{
+    color: white;
+    text-align: center;
+    font-family: Arial Serif sans-serif;
+    padding-bottom: 5%;
+}
+.footer{
+	color:white
+	margin-top:25%;
+}

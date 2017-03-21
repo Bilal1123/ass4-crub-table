@@ -1,0 +1,61 @@
+<link href="css/bootstrap.min.css"/>
+<div class="cover">
+<h1>
+  {{title}}
+</h1>
+
+
+
+    <table style="margin-left: 34.5%;">
+    <form [formGroup]="myForm" novalidate (submit)="add()">
+
+     <tr> <div>
+        <label style="margin: auto"> </label>
+        <input type="text" formControlName="id" placeholder="ID" style=" margin:auto; text-align: center; width: 190%; height: 30px;
+        font-size: 150%; font-family: 'Adobe Arabic';">
+     </div></tr>
+
+     <tr> <div>
+        <label> </label>
+        <input type="text" formControlName="name" placeholder="NAME" style="text-align: center; width: 190%; height: 30px;
+        font-size: 150%; font-family: 'Adobe Arabic';">
+      </div></tr>
+
+     <tr> <div>
+        <label> </label>
+        <input type="text" formControlName="department" placeholder="DEPARTMENT" style="text-align: center; width: 190%; height: 30px;
+        font-size: 150%; font-family: 'Adobe Arabic';">
+      </div></tr>
+
+      <tr><div>
+        <button type="submit" class="btn btn-primary" (click)="add()" style="color:white; width: 192%; padding: 4%; background-color: green; font-size: 180%;
+         font-family: 'Adobe Arabic'; border-style: solid; border-radius: 2%;">Add</button><br>
+        <button type="submit" class="btn btn-primary" (click)="save()" style="color:white; width: 192%; padding: 4%; background-color: blue;
+        font-size: 180%; font-family: 'Adobe Arabic'; border-style: solid; border-radius: 2%;">Save</button>
+      </div></tr>
+
+    </form>
+    </table>
+
+
+  <table class="table" border="2" style="margin: auto; width: 27%;"  >
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Actions</th>
+    </tr>
+
+    <tr *ngFor="let data of DataArray">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.department}}</td>
+
+      <td>
+        <button (click)="editing(data)" style="background-color: orange"> update </button>
+        <button (click)="delete(data)" style="background-color: red;"> delete </button>
+      </td>
+    </tr>
+  </table>
+
+</div>
